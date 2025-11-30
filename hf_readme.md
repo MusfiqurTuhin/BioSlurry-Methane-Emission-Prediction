@@ -17,8 +17,8 @@ task_categories:
 - tabular-regression
 - tabular-classification
 task_ids:
-- tabular-regression
-- tabular-classification
+- tabular-single-column-regression
+- tabular-multi-class-classification
 pretty_name: Bio-Slurry Methane Emission Dataset
 tags:
 - methane-emission
