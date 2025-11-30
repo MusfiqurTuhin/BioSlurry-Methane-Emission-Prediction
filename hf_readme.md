@@ -69,16 +69,52 @@ dataset = load_dataset("musfiqurtuhin/bioslurry-methane-emission")
 print(dataset['train'][0])
 ```
 
-## 🔗 Associated Resources
+## � Dataset Structure
 
-*   **GitHub Repository:** [BioSlurry-Methane-Emission-Prediction](https://github.com/MusfiqurTuhin/BioSlurry-Methane-Emission-Prediction)
-*   **Kaggle Dataset:** [Bio-Slurry Methane Emission Dataset](https://www.kaggle.com/datasets/musfiqurtuhin/bio-slurry-methane-emission-dataset)
+### Data Instances
+
+A typical data point consists of physicochemical parameters of the bio-slurry system and the corresponding methane emission level.
+
+```json
+{
+  "feature_1": 0.5,
+  "feature_2": 1.2,
+  "feature_3": 0.8,
+  "feature_4": 0.3,
+  "emission_level": 1
+}
+```
+
+### Data Fields
+
+| Field Name | Type | Description |
+| :--- | :--- | :--- |
+| `feature_1` | `float32` | Physicochemical parameter 1 (e.g., pH, Temperature) |
+| `feature_2` | `float32` | Physicochemical parameter 2 |
+| `feature_3` | `float32` | Physicochemical parameter 3 |
+| `feature_4` | `float32` | Physicochemical parameter 4 |
+| `emission_level` | `class_label` | Categorized emission level: `0` (Low), `1` (Medium), `2` (High) |
 
 ## 📊 Dataset Statistics
 
 *   **Total Samples:** 350
 *   **Preprocessing:** Outliers removed using IQR method.
 *   **Tasks:** Regression, Classification (3 classes)
+
+## �🔗 Associated Resources
+
+*   **GitHub Repository:** [BioSlurry-Methane-Emission-Prediction](https://github.com/MusfiqurTuhin/BioSlurry-Methane-Emission-Prediction)
+*   **Kaggle Dataset:** [Bio-Slurry Methane Emission Dataset](https://www.kaggle.com/datasets/musfiqurtuhin/bio-slurry-methane-emission-dataset)
+
+## ⚠️ Considerations for Using the Data
+
+### Social Impact of Dataset
+
+This dataset contributes to the understanding of greenhouse gas emissions from agricultural practices. Better prediction models can lead to more effective mitigation strategies, positively impacting climate change efforts.
+
+### Discussion of Biases
+
+The data is collected from specific experimental setups and may not fully represent all global bio-slurry systems. Users should consider the geographical and experimental context when generalizing findings.
 
 ## 🤝 Citation
 
@@ -94,3 +130,7 @@ If you use this dataset, please cite it as follows:
 	year={2025}
 }
 ```
+
+## 📬 Contact
+
+For questions or feedback, please contact: **Md. Musfiqur Rahman**
