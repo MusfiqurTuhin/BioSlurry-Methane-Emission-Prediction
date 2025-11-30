@@ -26,6 +26,8 @@ tags:
 - environment
 - machine-learning
 - ensemble-learning
+- stacking-regressor
+- climate-change
 dataset_info:
   features:
   - name: feature_1
@@ -49,13 +51,21 @@ dataset_info:
 
 ## 📄 Description
 
-This dataset is part of the research **"Predictive and Economic Assessment of Methane Emissions from Bio-Slurry Amended Systems using Ensemble Machine Learning"** (STI 2025). It contains data for predicting methane emissions from bio-slurry systems, supporting both regression and classification tasks.
+This dataset is the official data source for the research paper **"Predictive and Economic Assessment of Methane Emissions from Bio-Slurry Amended Systems using Ensemble Machine Learning"**, accepted at **STI 2025** (*Awaiting Publication*).
+
+It contains experimental data designed to predict methane emissions from bio-slurry amended agricultural systems. The dataset supports both **regression** (predicting exact emission values) and **classification** (categorizing emissions into Low, Medium, and High levels) tasks. It serves as a valuable resource for researchers working on environmental sustainability and climate change mitigation through machine learning.
 
 ## 🚀 Quick Start
 
+You can easily load this dataset using the Hugging Face `datasets` library:
+
 ```python
 from datasets import load_dataset
+
+# Load the dataset
 dataset = load_dataset("musfiqurtuhin/bioslurry-methane-emission")
+
+# View the first example
 print(dataset['train'][0])
 ```
 
@@ -64,7 +74,15 @@ print(dataset['train'][0])
 *   **GitHub Repository:** [BioSlurry-Methane-Emission-Prediction](https://github.com/MusfiqurTuhin/BioSlurry-Methane-Emission-Prediction)
 *   **Kaggle Dataset:** [Bio-Slurry Methane Emission Dataset](https://www.kaggle.com/datasets/musfiqurtuhin/bio-slurry-methane-emission-dataset)
 
+## 📊 Dataset Statistics
+
+*   **Total Samples:** 350
+*   **Preprocessing:** Outliers removed using IQR method.
+*   **Tasks:** Regression, Classification (3 classes)
+
 ## 🤝 Citation
+
+If you use this dataset, please cite it as follows:
 
 ```bibtex
 @misc{md__musfiqur_rahman_2025,

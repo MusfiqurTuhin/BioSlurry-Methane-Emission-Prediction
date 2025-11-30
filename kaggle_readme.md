@@ -1,11 +1,15 @@
 # Bio-Slurry Methane Emission Dataset
 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue?style=for-the-badge&logo=python&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-%23EB4034.svg?style=for-the-badge&logo=xgboost&logoColor=white)
 ![License](https://img.shields.io/badge/License-MIT-green.svg?style=for-the-badge)
 
 ## 📄 Context
 
-This dataset was collected for the research paper **"Predictive and Economic Assessment of Methane Emissions from Bio-Slurry Amended Systems using Ensemble Machine Learning"**, accepted at **STI 2025**. It aims to facilitate the development of machine learning models for predicting methane emissions from agricultural bio-slurry systems, which is crucial for environmental impact assessment and management.
+Methane emissions from agricultural systems, particularly bio-slurry amended soils, are a significant contributor to greenhouse gases. This dataset was collected as part of the research paper **"Predictive and Economic Assessment of Methane Emissions from Bio-Slurry Amended Systems using Ensemble Machine Learning"**, accepted at **STI 2025** (*Awaiting Publication*).
+
+The goal of this dataset is to enable the development of robust machine learning models that can accurately predict methane emission levels based on various physicochemical parameters of the bio-slurry systems. This can aid in developing strategies to mitigate emissions and improve environmental sustainability.
 
 ## 🔗 Associated Resources
 
@@ -15,15 +19,18 @@ This dataset was collected for the research paper **"Predictive and Economic Ass
 
 ## 💾 Dataset Specifications
 
-The dataset contains experimental data on methane emissions.
+The dataset comprises experimental data collected from bio-slurry amended systems.
 
-*   **Rows:** 350 (Cleaned)
-*   **Task:** Regression (Emission amount) & Classification (Emission level: Low, Medium, High)
+*   **Total Samples:** 350 (after preprocessing and outlier removal)
+*   **Features:** Physicochemical parameters of the soil and slurry mixture.
+*   **Target Variables:**
+    *   **Regression:** Quantitative methane emission levels.
+    *   **Classification:** Emission levels categorized into **Low**, **Medium**, and **High**.
 *   **Format:** CSV
 
 ## 🧠 Benchmarks
 
-The dataset has been benchmarked using various machine learning models. The **Stacking Regressor** achieved the best performance with an **R² score of 0.6663**.
+We evaluated several machine learning models on this dataset using 5-Fold Cross-Validation. The **Stacking Regressor** demonstrated superior performance.
 
 | Model | R² Score |
 | :--- | :--- |
@@ -31,10 +38,12 @@ The dataset has been benchmarked using various machine learning models. The **St
 | Random Forest | 0.6546 |
 | Linear Regression | 0.6485 |
 | CatBoost | 0.6415 |
+| LightGBM | 0.6029 |
+| XGBoost | 0.5106 |
 
 ## 🤝 Citation
 
-If you use this dataset in your research, please cite:
+If you use this dataset in your research or projects, please cite the following:
 
 ```bibtex
 @misc{md__musfiqur_rahman_2025,
@@ -46,3 +55,7 @@ If you use this dataset in your research, please cite:
 	year={2025}
 }
 ```
+
+## 📬 Contact
+
+For questions or feedback, please contact: **Md. Musfiqur Rahman**
